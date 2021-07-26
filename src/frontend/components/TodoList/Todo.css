@@ -1,0 +1,50 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  width: 700px;
+  height: 100px;
+  background-color: #8eccff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.addTodo {
+  text-align: center;
+  width: 700px;
+  background-color: #c3e5ff;
+}
+
+.todo {
+  width: 700px;
+  background-color: #f1f8ff;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+input {
+  height: 30px;
+  width: 70%;
+  text-align: center;
+  padding-left: 10px;
+  border: white;
+  border-radius: 16px;
+  margin: 16px;
+}
+
+button {
+  border-radius: 16px;
+  height: 30px;
+  width: 70px;
+  border: #c3e5ff;
+  background-color: #8eccff;
+}
+
+button:hover {
+  background-color: #4fb0ff;
+  cursor: pointer;
+}
