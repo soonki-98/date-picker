@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style/css/TodoForm.css";
 
-function TodoForm({ onClick, onChange }) {
+function TodoForm() {
+  const [text, setText] = useState("");
+  const onChange = (e) => {
+    setText(e.target.value);
+  };
+  const onClick = () => {
+    console.log(text);
+    // const req = {
+    //   method: "POST",
+    //   headers: {
+    //     "content-type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     //   description:
+    //   }),
+    // };
+
+    // fetch("url", req);
+  };
   return (
     <div className="addTodo">
       <input

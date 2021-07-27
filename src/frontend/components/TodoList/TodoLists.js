@@ -1,7 +1,23 @@
 import React from "react";
 import "./style/css/TodoLists.css";
+import TodoItems from "./TodoItems";
+const db = [
+  {
+    id: 1,
+    text: "hello0",
+  },
+  {
+    id: 2,
+    text: "hello1",
+  },
+  {
+    id: 3,
+    text: "hello2",
+  },
+];
 
-function TodoLists({ index, onClick, text }) {
+function TodoLists() {
+  // fetch("url").then(res => res.json()).then(data => console.log(data));
   return (
     <div className="todoTables">
       <table>
@@ -13,20 +29,9 @@ function TodoLists({ index, onClick, text }) {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td id="index">{index}</td>
-            <td id="text">{text}</td>
-            <td id="del">
-              <button className="delBtn" onClick={onClick}>
-                DEL
-              </button>
-            </td>
-            <td id="update">
-              <button className="updBtn" onClick={onClick}>
-                UPDATE
-              </button>
-            </td>
-          </tr>
+          {db.map((todos, index) => (
+            <TodoItems index={todos.id} text={todos.text} key={index} />
+          ))}
         </tbody>
       </table>
     </div>
