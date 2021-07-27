@@ -9,13 +9,10 @@ function App() {
   const onChange = (date) => {
     setStartDate(date);
   };
-  const seletedDate = `${startDate.getFullYear()} ${
-    startDate.getMonth() + 1
-  } ${startDate.getDate()}`;
   return (
     <div>
       <Calendar startDate={startDate} onChange={onChange} />
-      <Todo selectedDate={seletedDate} />
+      <Todo />
     </div>
   );
 }
