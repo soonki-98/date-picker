@@ -3,10 +3,9 @@ import "./style/css/TodoForm.css";
 
 function TodoForm() {
   const [text, setText] = useState("");
-  const onChange = (e) => {
-    setText(e.target.value);
-  };
-  const onClick = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setText("");
     console.log(text);
     // const req = {
     //   method: "POST",
@@ -20,17 +19,20 @@ function TodoForm() {
 
     // fetch("url", req);
   };
+  const onChange = (e) => {
+    setText(e.target.value);
+  };
   return (
     <div className="addTodo">
-      <input
-        onChange={onChange}
-        className="inputTodo"
-        type="text"
-        placeholder="할 일을 입력하세요"
-      />
-      <button onClick={onClick} className="inputBtn">
-        Input
-      </button>
+      <form onSubmit={onSubmit}>
+        <input
+          onChange={onChange}
+          className="inputTodo"
+          type="text"
+          placeholder="할 일을 입력하세요"
+        />
+        <button className="inputBtn">Input</button>
+      </form>
     </div>
   );
 }
