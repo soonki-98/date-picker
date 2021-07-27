@@ -23,7 +23,7 @@ function TodoLists() {
       <table>
         <thead>
           <tr>
-            <td id="index">ID</td>
+            <td id="index">NO</td>
             <td id="text">TODO'S</td>
             <td id="del"></td>
           </tr>
