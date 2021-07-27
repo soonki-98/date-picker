@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Comfortaa-Light";
+  src: url("../font/Comfortaa-Light.ttf") format("truetype");
+}
+
+.addTodo {
+  text-align: center;
+  width: 700px;
+  background: linear-gradient(to bottom, #8eccff, #f1f8ff);
+}
+
+input {
+  line-height: 40px;
+  width: 70%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  padding-left: 10px;
+  border: 3px solid #8eccff;
+  border-radius: 16px;
+  margin: 30px;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+.inputTodo {
+  border: none;
+  cursor: text;
+  font-weight: normal;
+}
+.inputBtn {
+  font-family: "Comfortaa-Light";
+  font-size: 15px;
+  border: 3px solid white;
+  border-radius: 16px;
+  height: 40px;
+  width: 70px;
+  background-color: transparent;
+}
+
+.inputBtn:hover {
+  background-color: #8eccff;
+  color: white;
+  text-shadow: 1px 1px 1px gray;
+  font-weight: bold;
+  cursor: pointer;
+}

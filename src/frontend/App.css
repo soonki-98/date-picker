@@ -1,4 +1,4 @@
 body {
-  background-color: #ddf0ff;
+  background: linear-gradient(to bottom, #ddf0ff, white);
   height: 1024px;
 }
