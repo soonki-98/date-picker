@@ -1,23 +1,8 @@
 import React from "react";
-import "./style/css/TodoLists.css";
+import "../style/css/TodoLists.css";
 import TodoItems from "./TodoItems";
-const db = [
-  {
-    id: 1,
-    text: "hello0",
-  },
-  {
-    id: 2,
-    text: "hello1",
-  },
-  {
-    id: 3,
-    text: "hello2",
-  },
-];
 
-function TodoLists() {
-  // fetch("url").then(res => res.json()).then(data => console.log(data));
+function TodoLists({ todos, putClick, delClick }) {
   return (
     <div className="todoTables">
       <table>
@@ -29,8 +14,14 @@ function TodoLists() {
           </tr>
         </thead>
         <tbody>
-          {db.map((todos, index) => (
-            <TodoItems index={todos.id} text={todos.text} key={index} />
+          {todos.map((todo, index) => (
+            <TodoItems
+              index={todo.id}
+              text={todo.text}
+              key={index}
+              putClick={putClick}
+              delClick={delClick}
+            />
           ))}
         </tbody>
       </table>

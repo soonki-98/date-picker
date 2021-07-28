@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Calendar from "./components/Calendar";
-import Todo from "./components/TodoList/Todo";
+import Calendar from "./components/Calendar/Calendar";
+import Todo from "./components/containers/Todo";
 import "./App.css";
 
 function App() {

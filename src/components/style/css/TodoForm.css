@@ -5,8 +5,8 @@
 
 .addTodo {
   text-align: center;
-  width: 700px;
-  background: linear-gradient(to bottom, #8eccff, #f1f8ff);
+  width: 900px;
+  background: linear-gradient(to bottom, #fdbcb4, #fff8f7);
 }
 
 input {
@@ -16,9 +16,9 @@ input {
   font-weight: bold;
   font-size: 15px;
   padding-left: 10px;
-  border: 3px solid #8eccff;
+  border: 3px solid #fdbcb4;
   border-radius: 16px;
-  margin: 30px;
+  margin: 20px 30px 50px 30px;
   cursor: pointer;
 }
 
@@ -42,7 +42,7 @@ input:focus {
 }
 
 .inputBtn:hover {
-  background-color: #8eccff;
+  background-color: #fdbcb4;
   color: white;
   text-shadow: 1px 1px 1px gray;
   font-weight: bold;
