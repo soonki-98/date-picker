@@ -6,6 +6,9 @@ import apeach from "../style/img/apeach.png";
 
 function Todo() {
   const [text, setText] = useState("");
+  // fetch("http://localhost:9800/api/todolist")
+  //   .then((res) => res.json())
+  //   .then((data) => console.log(data));
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -25,9 +28,19 @@ function Todo() {
   const idRef = useRef(3);
 
   const onSubmit = (e) => {
+    const req = {
+      method: "POST",
+      headers: { "Content-Type": " application/json; charset=utf-8" },
+      body: JSON.stringify({
+        description: text,
+      }),
+    };
     e.preventDefault();
     idRef.current += 1;
     setTodos([...todos, { id: idRef.current, text: text }]);
+    fetch("http://localhost:9800/api/todolist", req)
+      .then((res) => res.text())
+      .then((data) => console.log(data));
     inputRef.current.value = "";
     setText("");
   };
@@ -49,6 +62,9 @@ function Todo() {
     setTodos(todos.filter((el) => el.id !== id));
     todos.map((el) => (el.id > id ? (el.id -= 1) : el.id));
     idRef.current -= 1;
+    // fetch(`http://localhost:9800/api/todolist/${}`)
+    //   .then((res) => res.text())
+    //   .then((data) => console.log(data));
   };
   return (
     <div className="body">
